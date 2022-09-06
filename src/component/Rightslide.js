@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
+import axios from "axios";
 function Rightslide() {
+  const [MYSonge,setMYSonge]=useState([])
+
+  useEffect(() => {
+    axios.get("http://localhost:8000/Songs").then((response) => {
+      setMYSonge(response.data);
+    });
+  },[]);
   return (
     <div className="Rightslide">
       <div className="div1-Rightslide">
         <div className="div2-Rightslide">
-          <div className=" flex h-6">
+          <div className=" flex justify-around w-16">
             {" "}
             <Link className="link1-Rightslide" to={"/op"}>
               <i class="fa-solid fa-arrow-left-long"></i>
@@ -53,9 +63,16 @@ function Rightslide() {
           <button className="text-[#4E4F53] text-xs bg-[#1D1E23] rounded-full"><i class="fa-regular fa-bookmark p-2"></i></button>
         </div>
         <div className="mt-10 text-white tracking-[.10em]">Recommended Albums</div>
-        <div className=" flex items-center mt-1"> <p className="text-xs text-[#4E4F53]	mr-2">Get better Recommended music</p> <Link className="text-sm text-[#50CDA3] hover:text-yellow-500" to={'/lk'}>Go to favorite</Link></div>
+        
+        <div className=" flex  mt-1"> <p className="text-xs text-[#4E4F53]	mr-2">Get better Recommended music</p> <Link className="text-sm text-[#50CDA3] hover:text-yellow-500" to={'/lk'}>Go to favorite</Link></div>
+ <ul className="flex mt-3 ">
+   {MYSonge && MYSonge.map((song)=>{
+ return <button className="flex w-24 mr-4 flex-col	items-center group"> <img className="h-full group-hover:border	border-emerald-400 group-hover:shadow-[0_0px_10px_2px_rgb(37,205,144)]	 " src={song.SongPicture}></img><div className="text-white text-xs mt-2">{song.SongName}</div><div className="text-[10px] text-[#4E4F53]">{song.Author}</div></button>
+})}   
+ </ul>
 
       </div>
+      
     </div>
   );
 }

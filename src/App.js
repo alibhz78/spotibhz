@@ -6,7 +6,7 @@ function App() {
 <div className="main-div">
   <Leftslide/>
   <Rightslide/>
-<div className="music-navbar flex justify-between		">
+<div className="music-navbar flex justify-between">
   <div className="p-2 flex">
     <img className="w-9 h-9 rounded" src={Pic1}></img>
     <div className="ml-2">
@@ -14,7 +14,7 @@ function App() {
       <p className="text-[10px] text-[#4E4F53]">Arash</p>
     </div>
   </div>
-  <div className="play-music h-7 m-2	w-24 flex justify-between items-center	">
+  <div className="play-music h-6  m-2 w-24  flex justify-between items-center	">
     <button className="music-icon"><i class="fa-solid fa-backward-step"></i></button>
     <button className="music-icon"><i class="fa-solid fa-play"></i></button>
     <button className="music-icon"><i class="fa-solid fa-forward-step"></i></button>

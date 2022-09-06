@@ -1,12 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base{
+    @font-face {
+        font-family: 'vazir';
+        src: url("./fontvazir/Vazir.ttf");
+      }
+}
 @layer utilities{
     .main-div{
-        @apply w-screen h-screen flex relative	 
+        @apply  w-screen h-screen flex relative font-['vazir'] bg-[url('./pic/4K-OLED-Wallpaper-for-Desktop.jpg')] bg-cover 
     }
     .Leftslide{
-        @apply w-44  h-full bg-[#1D1E23]								 		  	
+        @apply w-44  h-full bg-[#1D1E23] overflow-y-auto 									 		  	
     }
     .btn-1{
         @apply w-16 items-center rounded-[15px] flex bg-[#50CDA3]	text-xs	h-6	m-3	
@@ -20,7 +26,7 @@
         @apply  mr-5 ml-1.5	
     }
     .link-1{
-        @apply w-full border-solid border-l-2 border-[#1D1E23] hover:border-solid hover:border-l-2 hover:border-l-teal-400	p-0.5 text-[12px]  flex mt-2 text-[#4E4F53]		 							
+        @apply w-full border-solid border-l-2 border-[#1D1E23] hover:border-solid hover:border-l-2 hover:border-l-green-400	p-0.5 text-[12px]  flex mt-2 text-[#4E4F53]		 							
     }
     .ul-1{
         @apply mb-10
@@ -29,22 +35,22 @@
         @apply text-[13px] ml-5 text-white	
     }
     .Rightslide{
-        @apply  bg-[url('./pic/4K-OLED-Wallpaper-for-Desktop.jpg')] bg-cover  h-screen w-screen relative overflow-hidden			
+        @apply h-full w-screen relative   overflow-hidden overflow-y-auto 	
     }
     .div1-Rightslide{
         @apply flex p-5 justify-between	 
     }
     .link1-Rightslide{
-        @apply shadow-[0_1px_5px_.5px_rgb(52,57,61)] text-[#4D5055] text-[11px] bg-neutral-800/20  rounded-full hover:text-white p-[5px] ml-1.5 text-center							
+        @apply shadow-[0_1px_5px_.5px_rgb(52,57,61)] text-[#4D5055] text-[11px] bg-neutral-800/20  rounded-full hover:text-white ml-1.5 flex items-center p-1.5							
 
 
     }
     .div2-Rightslide{
-        @apply flex items-center w-1/2
+        @apply flex items-center w-1/2 
     }
 
     .Rightslide-sec2{
-        @apply absolute	top-48 left-8  w-screen h-screen 
+        @apply absolute	top-48 left-8  w-screen	h-full		 
     }
     .What-hot{
         @apply text-white text-5xl w-96			
@@ -53,7 +59,7 @@
         @apply w-full absolute bg-neutral-900/90 bottom-0 left-0 h-14 shadow-[0_0px_5px_0px_rgb(0,0,0)]	
     }
     .music-icon{
-        @apply text-white  text-xs hover:bg-[#0DBFAF]  hover:text-black rounded-3xl w-6 h-6 text-center 
+        @apply text-white  text-xs hover:bg-[#0DBFAF]  hover:text-black rounded-3xl flex p-2 items-center h-full	 
         
     }
     .btn-musicSitting{
