@@ -53,7 +53,7 @@ function Rightslide() {
           <button className="text-[#4E4F53] text-xs bg-[#1D1E23] rounded-full"><i class="fa-regular fa-bookmark p-2"></i></button>
         </div>
         <div className="mt-10 text-white tracking-[.10em]">Recommended Albums</div>
-        <div className=" flex items-center mt-1"> <p className="text-xs text-[#4E4F53]	mr-2">Get better Recommended music</p> <Link className="text-sm text-[#50CDA3]" to={'/lk'}>Go to favorite</Link></div>
+        <div className=" flex items-center mt-1"> <p className="text-xs text-[#4E4F53]	mr-2">Get better Recommended music</p> <Link className="text-sm text-[#50CDA3] hover:text-yellow-500" to={'/lk'}>Go to favorite</Link></div>
 
       </div>
     </div>
