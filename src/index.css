@@ -6,8 +6,10 @@
         font-family: 'vazir';
         src: url("./fontvazir/Vazir.ttf");
       }
+  
 }
 @layer utilities{
+    
     .main-div{
         @apply  w-screen h-screen flex relative font-['vazir'] bg-[url('./pic/4K-OLED-Wallpaper-for-Desktop.jpg')] bg-cover 
     }
@@ -35,7 +37,7 @@
         @apply text-[13px] ml-5 text-white	
     }
     .Rightslide{
-        @apply h-full w-screen relative   overflow-hidden overflow-y-auto 	
+        @apply h-full w-screen relative   overflow-hidden  	
     }
     .div1-Rightslide{
         @apply flex p-5 justify-between	 
@@ -63,6 +65,6 @@
         
     }
     .btn-musicSitting{
-        @apply text-[#404145] text-sm hover:text-white p-1
+        @apply text-[#404145] text-[13px] hover:text-white p-1
     }
 }
